@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SaludApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_hint">Correo Electronico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="button_login_label">Ingresar</string>
+    <string name="login_label1">No tengo cuenta</string>
+    <string name="login_signup_label">Crea una cuenta</string>
+    <string name="email_error">Correo electronico no valido</string>
+    <string name="password_error">Error en la contraseña</string>
+    <string name="button_signup_label">Crear Cuenta</string>
+    <string name="signup_label_1">Tengo cuenta</string>
+    <string name="signup_login_label">Iniciar Sesión</string>
+    <string name="name_hint">Nombre</string>
+    <string name="male_label">Masculino</string>
+    <string name="female_label">Femenino</string>
+    <string name="another_label">Otro</string>
+    <string name="button_forgout_label">Cambiar Contraseña</string>
+    <string name="login_forgot_password">Olvidaste la contraseña?</string>
+    <string name="home_label">Home</string>
+    <string name="location_Label">Localización</string>
+    <string name="profile_label">Mi perfil</string>
+    <string name="specialist_label">Especializacón</string>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav"
+    app:startDestination="@id/loginFragment2">
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.project002.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment2"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_loginFragment2_to_forgoutFragment"
+            app:destination="@id/forgoutFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment2"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.project002.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment2"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgoutFragment"
+        android:name="com.example.project002.ForgoutFragment"
+        android:label="fragment_forgout"
+        tools:layout="@layout/fragment_forgout" >
+        <action
+            android:id="@+id/action_forgoutFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment2"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>
