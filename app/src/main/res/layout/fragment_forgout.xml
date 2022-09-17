@@ -7,7 +7,7 @@
     tools:context=".ForgoutFragment">
 
     <com.google.android.material.card.MaterialCardView
-        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintVertical_chainStyle="spread"
         android:id="@+id/fragment_forgout_card"
         android:layout_width="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/fragment_forgout_button"
         android:layout_marginTop="@dimen/small_margin"
-        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginHorizontal="@dimen/small_margin"
         android:layout_height="wrap_content"
         app:cardElevation="@dimen/card_elevation">
 
@@ -56,8 +56,9 @@
         android:layout_marginHorizontal="@dimen/default_margin"
         app:layout_constraintTop_toBottomOf="@id/fragment_forgout_card"
         app:layout_constraintBottom_toTopOf="@id/fragment_forgout_label_1"
+        android:textSize="@dimen/medium_font"
         android:text="@string/button_forgout_label"
-        app:backgroundTint="@color/primaryVariant"/>
+        app:backgroundTint="@color/primary"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/fragment_forgout_label_1"
@@ -67,10 +68,11 @@
         app:layout_constraintEnd_toStartOf="@+id/fragment_forgout_label_2"
         app:layout_constraintTop_toBottomOf="@id/fragment_forgout_button"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/medium_font"
+        android:textColor="@color/primary"
         android:text="@string/login_label1"
         app:layout_constraintHorizontal_chainStyle="packed"
-        android:layout_marginHorizontal="@dimen/default_margin"/>
-
+        android:layout_marginHorizontal="20dp"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/fragment_forgout_label_2"
         android:layout_width="wrap_content"
@@ -79,9 +81,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/fragment_forgout_label_1"
         app:layout_constraintBottom_toBottomOf="@id/fragment_forgout_label_1"
-        android:layout_marginVertical="@dimen/default_margin"
+        android:layout_marginVertical="20dp"
+        android:textSize="@dimen/medium_font"
         android:text="@string/login_signup_label"
-        android:textColor="@color/secondaryText"/>
+        android:textColor="@color/primaryLight"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

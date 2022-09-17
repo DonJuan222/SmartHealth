@@ -25,6 +25,14 @@ class ForgoutFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
+        binding.fragmentForgoutButton.setOnClickListener {
+            if (!binding.forgoutEmail.text.toString().isValidEmail()) {
+                binding.forgoutEmailLayout.error = getString(R.string.email_error)
+            } else {
+                binding.forgoutEmailLayout.error = null
+            }
+        }
+
         binding.fragmentForgoutLabel2.setOnClickListener {
             findNavController().navigate(R.id.action_forgoutFragment_to_signUpFragment)
         }
