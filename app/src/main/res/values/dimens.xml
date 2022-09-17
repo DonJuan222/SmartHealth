@@ -4,8 +4,9 @@
     <dimen name="big_margin">35dp</dimen>
     <dimen name="default_margin">16dp</dimen>
     <dimen name="card_elevation">8dp</dimen>
-    <dimen name="small_margin">8dp</dimen>
+    <dimen name="small_margin">4dp</dimen>
     <dimen name="cornerSize">14dp</dimen>
     <dimen name="cornerSize_md">8dp</dimen>
     <dimen name="cornerSize_lg">4dp</dimen>
+    <dimen name="medium_font">15dp</dimen>
 </resources>
