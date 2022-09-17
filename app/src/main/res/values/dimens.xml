@@ -8,5 +8,6 @@
     <dimen name="cornerSize">14dp</dimen>
     <dimen name="cornerSize_md">8dp</dimen>
     <dimen name="cornerSize_lg">4dp</dimen>
+    <dimen name="very_big_margin">40dp</dimen>
     <dimen name="medium_font">15dp</dimen>
 </resources>
