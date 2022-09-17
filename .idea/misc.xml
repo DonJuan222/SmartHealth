@@ -14,6 +14,8 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.15670289855072464" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.17119565217391305" />
         <entry key="app/src/main/res/layout/fragment_forgout.xml" value="0.17119565217391305" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.4339141845703125" />
       </map>
     </option>
   </component>
