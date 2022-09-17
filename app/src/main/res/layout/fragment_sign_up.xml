@@ -136,7 +136,8 @@
         app:layout_constraintTop_toBottomOf="@id/fragment_signup_card"
         app:layout_constraintBottom_toTopOf="@id/fragment_signup_label_1"
         android:text="@string/button_signup_label"
-        app:backgroundTint="@color/primaryVariant"/>
+        android:textSize="@dimen/medium_font"
+        app:backgroundTint="@color/primary"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/fragment_signup_label_1"
@@ -147,6 +148,7 @@
         app:layout_constraintTop_toBottomOf="@id/fragment_signup_button"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="@string/signup_label_1"
+        android:textSize="@dimen/medium_font"
         app:layout_constraintHorizontal_chainStyle="packed"
         android:layout_marginHorizontal="@dimen/default_margin"/>
 
@@ -160,6 +162,7 @@
         app:layout_constraintBottom_toBottomOf="@id/fragment_signup_label_1"
         android:layout_marginVertical="@dimen/default_margin"
         android:text="@string/signup_login_label"
+        android:textSize="@dimen/medium_font"
         android:textColor="@color/secondaryText"/>
 
 

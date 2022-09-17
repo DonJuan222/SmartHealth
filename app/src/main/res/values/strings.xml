@@ -8,7 +8,9 @@
     <string name="login_label1">No tengo cuenta</string>
     <string name="login_signup_label">Crea una cuenta</string>
     <string name="email_error">Correo electronico no valido</string>
+    <string name="email_error2">Ingresa un correo electronico valido</string>
     <string name="password_error">Error en la contraseña</string>
+    <string name="password_error2">Debe contener minimo 8 caracteres</string>
     <string name="button_signup_label">Crear Cuenta</string>
     <string name="signup_label_1">Tengo cuenta</string>
     <string name="signup_login_label">Iniciar Sesión</string>
