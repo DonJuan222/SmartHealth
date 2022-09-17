@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:lottie_rawRes="@raw/data2"/>
+        app:lottie_rawRes="@raw/animationini"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

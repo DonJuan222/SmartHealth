@@ -10,6 +10,10 @@
         <entry key="..\:/Users/jpoli/AndroidStudioProjects/Project002/app/src/main/res/layout/fragment_login.xml" value="0.1" />
         <entry key="..\:/Users/jpoli/AndroidStudioProjects/Project002/app/src/main/res/layout/fragment_sign_up.xml" value="0.22" />
         <entry key="..\:/Users/jpoli/AndroidStudioProjects/Project002/app/src/main/res/menu/home_menu.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/drawable/logoShFin_background.xml" value="0.192" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.15670289855072464" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.17119565217391305" />
+        <entry key="app/src/main/res/layout/fragment_forgout.xml" value="0.17119565217391305" />
       </map>
     </option>
   </component>
