@@ -1,13 +1,17 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="icon_size">220dp</dimen>
-    <dimen name="big_margin">35dp</dimen>
+    <dimen name="icon_size">148dp</dimen>
+    <dimen name="big_margin">50dp</dimen>
     <dimen name="default_margin">16dp</dimen>
     <dimen name="card_elevation">8dp</dimen>
-    <dimen name="small_margin">4dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
     <dimen name="cornerSize">14dp</dimen>
     <dimen name="cornerSize_md">8dp</dimen>
     <dimen name="cornerSize_lg">4dp</dimen>
     <dimen name="very_big_margin">40dp</dimen>
     <dimen name="medium_font">15dp</dimen>
+    <dimen name="text_Toolbar_Size">30dp</dimen>
+    <dimen name="banner_size">148dp</dimen>
+    <dimen name="subtitle_size">16sp</dimen>
+
 </resources>

@@ -47,6 +47,25 @@
         <item name="cornerSize">@dimen/cornerSize_lg</item>
     </style>
 
+    <style name="Title_Fragment_Home" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/fjalla_one</item>
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Subtitle_Fragment_Home" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/fjalla_one</item>
+        <item name="android:textColor">@color/primaryVariant</item>
+        <item name="android:textSize">@dimen/subtitle_size</item>
+    </style>
+
+    <style name="Title_List_Fragment_Home" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/fjalla_one</item>
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textSize">@dimen/subtitle_size</item>
+    </style>
+
     <style name="Theme.Project002.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Project002.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

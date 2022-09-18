@@ -24,5 +24,9 @@
     <string name="location_Label">Localización</string>
     <string name="profile_label">Mi perfil</string>
     <string name="specialist_label">Especializacón</string>
+    <string name="text_toolbar">SMART-HEALTH</string>
+    <string name="title_fragment_home">Tu medico inteligente</string>
+    <string name="fragment_home_subtitle_text">Te brindamos la mejor compañia y asesoria con el personal especializado</string>
+    <string name="fragment_home_list_services">Nuestros Servicios</string>
 
 </resources>
