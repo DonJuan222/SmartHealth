@@ -13,5 +13,6 @@
     <dimen name="text_Toolbar_Size">30dp</dimen>
     <dimen name="banner_size">148dp</dimen>
     <dimen name="subtitle_size">16sp</dimen>
+    <dimen name="service_icon_size">64dp</dimen>
 
 </resources>
