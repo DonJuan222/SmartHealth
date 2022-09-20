@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SpecialistFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/specialist_banner_image"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/banner_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/specialist_img_banner"
+        android:scaleType="fitXY">
+    </com.google.android.material.imageview.ShapeableImageView>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/specialist_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/specialist_banner_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/tittle_general"
+        android:layout_marginVertical="@dimen/default_margin"
+        android:textAppearance="@style/Title_Fragment_Home"
+        />
+
+    <TextView
+        android:id="@+id/specialist_subtittle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/specialist_tittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/specialist_subtittle"
+        android:layout_marginVertical="@dimen/default_margin"
+        android:layout_marginHorizontal="@dimen/big_margin"
+        android:gravity="center"
+        android:textAppearance="@style/Subtitle_Fragment_Home"
+        />
+
+    <TextView
+        android:id="@+id/specialist_tittle_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/specialist_subtittle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/especialistas_tittle_list"
+        android:layout_marginVertical="@dimen/default_margin"
+        android:layout_marginHorizontal="@dimen/big_margin"
+        android:gravity="center"
+        android:textAppearance="@style/Title_List_Fragment_Home"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

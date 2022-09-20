@@ -30,5 +30,8 @@
     <string name="fragment_home_list_services">Todos Nuestros Servicios</string>
     <string name="item_service_derma">Dermatologia</string>
     <string name="item_service_gene">General</string>
+    <string name="tittle_general">General</string>
+    <string name="specialist_subtittle">Profecionales capacitados para realizar el diagnostico y tratamiento</string>
+    <string name="especialistas_tittle_list">Especialistas</string>
 
 </resources>
