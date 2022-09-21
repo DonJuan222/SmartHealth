@@ -43,17 +43,63 @@
         android:textAppearance="@style/Subtitle_Fragment_Home"
         />
 
+    <FrameLayout
+        android:id="@+id/frame_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/specialist_subtittle"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
     <TextView
         android:id="@+id/specialist_tittle_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/specialist_subtittle"
-        app:layout_constraintStart_toStartOf="parent"
         android:text="@string/especialistas_tittle_list"
         android:layout_marginVertical="@dimen/default_margin"
         android:layout_marginHorizontal="@dimen/big_margin"
+        android:visibility="gone"
+        tools:visibility="visible"
         android:gravity="center"
         android:textAppearance="@style/Title_List_Fragment_Home"
+        />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/specialist_search"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/big_margin"
+            android:layout_marginVertical="@dimen/default_margin"
+            android:visibility="gone"
+            tools:visibility="visible"
+
+            >
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:hint="@string/filtrar_specialist"
+                >
+
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        
+</FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_fragment_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/frame_tittle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/small_margin"
+        tools:listitem="@layout/item_service"
+        android:paddingHorizontal="@dimen/small_margin"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
