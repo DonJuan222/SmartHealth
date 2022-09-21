@@ -42,6 +42,12 @@
         <item name="cornerSize">@dimen/cornerSize_md</item>
     </style>
 
+    <style name="Letras.Sombreadas" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="fontFamily">@font/fjalla_one</item>
+        <item name="android:textColor">@color/primaryVariant</item>
+    </style>
+
     <style name="ShapeAppearance.project.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/cornerSize_lg</item>
