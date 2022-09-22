@@ -7,6 +7,8 @@ import com.example.project002.databinding.ItemServiceBinding
 
 class ServiceAdapter(var list: List<ServiceModel>):RecyclerView.Adapter<ServiceAdapter.ViewHolder>() {
 
+    var listener: OnServiceClickListener?=null
+
     class ViewHolder(val view:ItemServiceBinding):RecyclerView.ViewHolder(view.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -19,6 +21,9 @@ class ServiceAdapter(var list: List<ServiceModel>):RecyclerView.Adapter<ServiceA
         holder.view.itemServiceTitleGene.text=item.title
         holder.view.itemServiceDescription.text=item.description
         holder.view.itemServiceIco.setImageResource(item.icon.toInt())
+        holder.view.root.setOnClickListener {
+            listener?.onClick(item)
+        }
     }
 
     override fun getItemCount(): Int {
