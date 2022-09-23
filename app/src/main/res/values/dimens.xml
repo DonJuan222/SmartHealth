@@ -10,6 +10,7 @@
     <dimen name="cornerSize_lg">4dp</dimen>
     <dimen name="very_big_margin">40dp</dimen>
     <dimen name="medium_font">15dp</dimen>
+    <dimen name="text_caption">11dp</dimen>
     <dimen name="text_Toolbar_Size">30dp</dimen>
     <dimen name="banner_size">148dp</dimen>
     <dimen name="subtitle_size">16sp</dimen>

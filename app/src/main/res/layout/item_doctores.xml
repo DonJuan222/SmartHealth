@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_doctores_icon"
+        android:layout_width="@dimen/service_icon_size"
+        android:layout_height="@dimen/service_icon_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/big_margin"
+        app:srcCompat="@drawable/ico_general" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/item_doctores_icon"
+        app:layout_constraintStart_toEndOf="@id/item_doctores_icon"
+        tools:text="Doctor General"
+        android:layout_marginStart="@dimen/default_margin"
+        style="@style/CardView.Dark"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name_doctor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_doctor_title"
+        app:layout_constraintStart_toEndOf="@id/item_doctores_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Dr. Juan Diego P"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        />
+
+    <RatingBar
+        android:id="@+id/stars_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_doctores_icon"
+        app:layout_constraintTop_toBottomOf="@id/name_doctor"
+        android:numStars="1"
+        android:rating="1"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        style="?android:attr/ratingBarStyleSmall"
+        >
+
+    </RatingBar>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/stars_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/stars_doctor"
+        app:layout_constraintBottom_toBottomOf="@id/stars_doctor"
+        app:layout_constraintStart_toEndOf="@id/stars_doctor"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="3 estrellas 300 pacientes"
+        android:textAppearance="@style/Letras.Sombreadas"
+        android:layout_marginHorizontal="3dp"
+
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintTop_toBottomOf="@id/item_doctores_icon"
+        android:background="@color/black"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
