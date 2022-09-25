@@ -3,12 +3,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_margin="@dimen/big_margin"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_stats"
+        >
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/name_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/name_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ico_general"
+        >
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/name_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        android:text="Dr Diego Andres P"
+        android:layout_marginVertical="@dimen/small_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/info_profecion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_profile"
+        android:text="Medicina general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <RatingBar
+        android:id="@+id/rating_prifile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_profecion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RatingBar>
+
+
+     <TextView
+         android:id="@+id/info_profile_specialist"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:gravity="left"
+         app:layout_constraintTop_toBottomOf="@id/rating_prifile"
+         android:text="INFORMACION DEL ESPECIALISTA"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+     </TextView>
+        <TextView
+            android:id="@+id/info_general_especialist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info_profile_specialist"
+            android:text="este es el texto de prueba del especialista que estamos
+            testeando para generar el prodile y probar bastantes letras estoy llenando
+            con lo que se me valla vieniendo a la mente en este momento jajajajaja que
+            prueba mas larga este texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/boton_ir_maps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info_general_especialist"
+            android:text="IR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.button.MaterialButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>
