@@ -1,11 +1,13 @@
-package com.example.project002
+package com.example.project002.ul.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.project002.interfaces.OnServiceClickListener
+import com.example.project002.data.models.ServiceModel
 import com.example.project002.databinding.ItemServiceBinding
 
-class ServiceAdapter(var list: List<ServiceModel>):RecyclerView.Adapter<ServiceAdapter.ViewHolder>() {
+class ServiceAdapter(var list: MutableList<ServiceModel>):RecyclerView.Adapter<ServiceAdapter.ViewHolder>() {
 
     var listener: OnServiceClickListener?=null
 
@@ -28,5 +30,16 @@ class ServiceAdapter(var list: List<ServiceModel>):RecyclerView.Adapter<ServiceA
 
     override fun getItemCount(): Int {
         return list.size
+    }
+    
+    fun changeDataSet(newList: List<ServiceModel>){
+        while (list.size > 0){
+            list.removeAt(0)
+            notifyItemRemoved(0)
+        }
+        newList.forEach { 
+            this.list.add(it)
+            notifyItemInserted(this.list.size - 1)
+        }
     }
 }

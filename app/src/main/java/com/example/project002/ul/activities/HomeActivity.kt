@@ -1,12 +1,12 @@
-package com.example.project002
+package com.example.project002.ul.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.example.project002.R
 import com.example.project002.databinding.ActivityHomeBinding
-import com.example.project002.databinding.ActivityLoginBinding
 
 class HomeActivity : AppCompatActivity() {
 
@@ -27,7 +27,8 @@ class HomeActivity : AppCompatActivity() {
                 R.id.homeFragment,
                 R.id.specialistFragment,
                 R.id.locationFragment,
-                R.id.profileFragment)
+                R.id.profileFragment
+            )
         )
         binding.homeNavigation.setupWithNavController(navController)
         binding.homeToolbar.setupWithNavController(navController, appBarConfiguration)

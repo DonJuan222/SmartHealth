@@ -34,5 +34,6 @@
     <string name="specialist_subtittle">Profecionales capacitados para realizar el diagnostico y tratamiento</string>
     <string name="especialistas_tittle_list">Especialistas</string>
     <string name="filtrar_specialist">Filtrar</string>
+    <string name="login_error">Credenciales invalidas </string>
 
 </resources>

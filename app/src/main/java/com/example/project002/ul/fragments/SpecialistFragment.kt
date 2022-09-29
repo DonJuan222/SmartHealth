@@ -1,4 +1,4 @@
-package com.example.project002
+package com.example.project002.ul.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.project002.interfaces.OnServiceClickListener
+import com.example.project002.R
+import com.example.project002.ul.adapters.ServiceAdapter
+import com.example.project002.data.models.ServiceModel
 import com.example.project002.databinding.FragmentSpecialistBinding
-import kotlin.math.log
 
 
 class SpecialistFragment : Fragment() {
@@ -29,7 +32,7 @@ class SpecialistFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         serviceAdapter= ServiceAdapter(
-            listOf(
+            mutableListOf(
                 ServiceModel(
                     "1","General","Los mejores especialistas en Medicina General",
                     R.drawable.ico_general.toString()
@@ -48,7 +51,7 @@ class SpecialistFragment : Fragment() {
                 )
             )
         )
-        serviceAdapter.listener=object : OnServiceClickListener{
+        serviceAdapter.listener=object : OnServiceClickListener {
             override fun onClick(item: ServiceModel) {
                 Log.d("Hola", item.title)
             }

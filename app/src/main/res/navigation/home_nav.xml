@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.project002.HomeFragment"
+        android:name="com.example.project002.ul.fragments.HomeFragment"
         android:label="@string/home_label"
         tools:layout="@layout/fragment_home" >
         <argument
@@ -27,17 +27,17 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.project002.ProfileFragment"
+        android:name="com.example.project002.ul.fragments.ProfileFragment"
         android:label="@string/profile_label"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/specialistFragment"
-        android:name="com.example.project002.SpecialistFragment"
+        android:name="com.example.project002.ul.fragments.SpecialistFragment"
         android:label="@string/specialist_label"
         tools:layout="@layout/fragment_specialist" />
     <fragment
         android:id="@+id/locationFragment"
-        android:name="com.example.project002.BlankFragment"
+        android:name="com.example.project002.ul.fragments.BlankFragment"
         android:label="@string/location_Label"
         tools:layout="@layout/fragment_location" />
 </navigation>
