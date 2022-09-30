@@ -5,6 +5,6 @@ import com.example.project002.data.repositories.LoginRepository
 import org.koin.dsl.module
 
 val repoModule = module {
-    single { LoginRepository() }
+    single { LoginRepository(get()) }
     single { HomeRepository(get())}
 }

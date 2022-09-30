@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="@dimen/small_margin"
         android:layout_marginStart="@dimen/big_margin"
-        app:srcCompat="@drawable/ico_general" />
+        app:srcCompat="@drawable/doc1" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/item_doctor_title"

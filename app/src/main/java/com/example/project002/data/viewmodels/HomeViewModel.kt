@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.project002.data.models.CompanyModel
 import com.example.project002.data.models.ServiceModel
 import com.example.project002.data.repositories.HomeRepository
 import com.example.project002.dl.viewModelModule
@@ -13,9 +14,17 @@ class HomeViewModel(private val repo: HomeRepository): ViewModel() {
     private var _services: MutableLiveData<List<ServiceModel>> = MutableLiveData()
     val services: LiveData<List<ServiceModel>> get() = _services
 
+    private var _company: MutableLiveData<CompanyModel> = MutableLiveData()
+    val company: LiveData<CompanyModel> get() = _company
+
     fun getServices(){
         viewModelScope.launch {
             _services.postValue(repo.getServices())
+        }
+    }
+    fun getInfo(){
+        viewModelScope.launch {
+            _company.postValue(repo.getInfo())
         }
     }
 
