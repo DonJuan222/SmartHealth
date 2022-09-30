@@ -7,14 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project002.interfaces.OnServiceClickListener
 import com.example.project002.R
 import com.example.project002.ul.adapters.ServiceAdapter
 import com.example.project002.data.models.ServiceModel
+import com.example.project002.data.repositories.HomeRepository
 import com.example.project002.data.viewmodels.HomeViewModel
 import com.example.project002.data.viewmodels.LoginViewModel
 import com.example.project002.databinding.FragmentHomeBinding
+import com.example.project002.ul.activities.HomeActivity
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
@@ -41,11 +44,10 @@ class HomeFragment : Fragment() {
         serviceAdapter= ServiceAdapter(
             mutableListOf()
         )
-        serviceAdapter.listener=object : OnServiceClickListener {
-            override fun onClick(item: ServiceModel) {
+        serviceAdapter.listener = object : OnServiceClickListener{
+            override fun onClick(item: ServiceModel){
                 Log.d("Hola", item.title)
             }
-
         }
         binding.homeFragmentRecycler.apply {
             adapter=serviceAdapter

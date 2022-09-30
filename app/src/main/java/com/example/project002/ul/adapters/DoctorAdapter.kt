@@ -10,7 +10,7 @@ import com.example.project002.interfaces.OnDoctorClickListener
 
 class DoctorAdapter(var list: List<DoctorModel>): RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {
 
-    private var listener: OnDoctorClickListener? = null
+    var listener: OnDoctorClickListener? = null
 
     class ViewHolder(val view: ItemDoctoresBinding):RecyclerView.ViewHolder(view.root)
 
@@ -34,5 +34,9 @@ class DoctorAdapter(var list: List<DoctorModel>): RecyclerView.Adapter<DoctorAda
 
     override fun getItemCount(): Int {
         return list.size
+    }
+    fun changeDataSet(newList: List<DoctorModel>){
+        this.list = newList
+        notifyDataSetChanged()
     }
 }
