@@ -35,6 +35,7 @@
     <string name="especialistas_tittle_list">Especialistas</string>
     <string name="filtrar_specialist">Filtrar</string>
     <string name="login_error">Credenciales invalidas </string>
+    <string name="signup_error">Registro Invalido </string>
     <string name="specialist_fragment_title"> Nuestros Especialistas </string>
     <string name="specialist_fragment_subtitle"> Agenda una cita con una especialidad de tu preferencia </string>
     <string name="details">Detalles del Medico </string>

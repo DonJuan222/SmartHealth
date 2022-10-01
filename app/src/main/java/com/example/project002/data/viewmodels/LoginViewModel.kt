@@ -14,14 +14,13 @@ class LoginViewModel(private val repo: LoginRepository): ViewModel() {
     private var _login: MutableLiveData<Boolean> = MutableLiveData()
     val login: LiveData<Boolean> get() = _login
 
-    private var _logOut: MutableLiveData<Boolean> = MutableLiveData()
-    val logOut: LiveData<Boolean> get() = _logOut
+    private var _signUp: MutableLiveData<Boolean> = MutableLiveData()
+    val signUp: LiveData<Boolean> get() = _signUp
 
-    private val _user: MutableLiveData<UserModel> = MutableLiveData()
-    val user: LiveData<UserModel> get() = _user
+    private var _user: MutableLiveData<UserModel?> = MutableLiveData()
+    val user: LiveData<UserModel?> get() = _user
 
     fun login(email: String, password: String){
-
             viewModelScope.launch {
                 try {
                 repo.login(email, password)
@@ -31,14 +30,23 @@ class LoginViewModel(private val repo: LoginRepository): ViewModel() {
             }
         }
     }
+    fun signUp(email: String, password: String, name: String, gender: String){
+        viewModelScope.launch {
+            try {
+                repo.signUp(email, password, name, gender)
+                _signUp.postValue(true)
+            }catch (e:Exception){
+                _signUp.postValue(false)
+            }
+        }
+    }
+
     fun logOut(){
         viewModelScope.launch {
             try {
             repo.logOut()
-                _logOut.postValue(true)
+            _user.postValue(null)
         }catch (e:Exception){
-                _logOut.postValue(false)
-
             }
         }
     }
