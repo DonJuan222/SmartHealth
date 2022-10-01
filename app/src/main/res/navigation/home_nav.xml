@@ -32,7 +32,11 @@
         android:id="@+id/profileFragment"
         android:name="com.example.project002.ul.fragments.ProfileFragment"
         android:label="@string/profile_label"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/specialistFragment"
         android:name="com.example.project002.ul.fragments.SpecialistFragment"

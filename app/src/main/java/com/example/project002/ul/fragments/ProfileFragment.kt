@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import com.example.project002.data.viewmodels.LoginViewModel
 import com.example.project002.databinding.FragmentProfileBinding
@@ -26,6 +27,7 @@ class ProfileFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+
     }
 
 
