@@ -35,7 +35,7 @@ class LoginRepository (private val memoryDataSource: MemoryDataSource,
             if(user.photoUrl != null){
                 photo = user.photoUrl.toString()
             }
-            return UserModel(user.uid,user.displayName!!,user.email!!, gender = "",photo)
+            return UserModel(user.uid,user.displayName!!,user.email!!, "",photo)
         }
         return null
     }
@@ -52,6 +52,7 @@ class LoginRepository (private val memoryDataSource: MemoryDataSource,
                 "gender" to gender
             )
 
+            user.updateProfile(profileUpdate).await()
             db.collection(USER_COLLETION).document(user.uid).set(userInfo).await()
 
         }catch (e:FirebaseAuthException){

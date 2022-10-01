@@ -47,18 +47,18 @@ class SignUpFragment : Fragment() {
             )
         }
 
-        binding.fragmentSignupButton.setOnClickListener {
-            if (!binding.signupEmail.text.toString().isValidEmail()) {
-                binding.signupEmailLayout.error = getString(R.string.email_error2)
-            } else {
-                binding.signupEmailLayout.error = null
-            }
-            if (!binding.signupPassword.text.toString().isValidPassword()){
-                binding.signupPasswordLayout.error=getString(R.string.password_error2)
-            }else{
-                binding.signupPasswordLayout.error=null
-            }
-        }
+//        binding.fragmentSignupButton.setOnClickListener {
+//            if (!binding.signupEmail.text.toString().isValidEmail()) {
+//                binding.signupEmailLayout.error = getString(R.string.email_error2)
+//            } else {
+//                binding.signupEmailLayout.error = null
+//            }
+//            if (!binding.signupPassword.text.toString().isValidPassword()){
+//                binding.signupPasswordLayout.error=getString(R.string.password_error2)
+//            }else{
+//                binding.signupPasswordLayout.error=null
+//            }
+//        }
 
         binding.fragmentSignupLabel2.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment2)
