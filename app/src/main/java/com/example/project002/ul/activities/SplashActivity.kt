@@ -4,11 +4,21 @@ import android.animation.Animator
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.project002.data.AppDatabase
+import com.example.project002.data.datasources.MemoryDataSource
 import com.example.project002.databinding.ActivitySplashBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.newSingleThreadContext
+import org.koin.android.ext.android.inject
 
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
+
+    private val db: AppDatabase by inject<AppDatabase>()
+    private val memoryDataSource:MemoryDataSource by inject()
+    private val scope= CoroutineScope(newSingleThreadContext("splash"))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +28,14 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        scope.launch {
+            if (db.doctorDao().count() == 0){
+                db.doctorDao().insertAll(memoryDataSource.getSpecialist(null))
+            }
+            if (db.serviceDao().count() == 0){
+                db.serviceDao().insertAll(memoryDataSource.getServices())
+            }
+        }
         binding.splashAnimation.playAnimation()
 
         binding.splashAnimation.addAnimatorListener(object: Animator.AnimatorListener{
