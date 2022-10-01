@@ -11,6 +11,11 @@ class LoginRepository (private val memoryDataSource: MemoryDataSource){
             throw Exception("Credenciales invalidas")
         }
     }
+
+    suspend fun logOut(){
+
+    }
+
     suspend fun getCurrentUser():UserModel{
         return memoryDataSource.getCurrentUser()
 
